@@ -1,0 +1,570 @@
+@import url("../index.css");
+
+@import url("../animation/autoScroll.css");
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: calc(100% - 2rem);
+
+    background: var(--black);
+    border-radius: var(--border-radius);
+    color: var(--white);
+
+    padding: 1rem;
+    margin: 1rem;
+
+    font-weight: bold;
+
+    position: fixed;
+
+    z-index: 999;
+}
+
+nav > #logo {
+    font-size: larger;
+}
+
+.nav__button {
+    --border-radius: 1rem;
+
+    color: var(--white);
+
+    border: 1px solid var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+
+    transition: background 0.5s, color 0.5s;
+}
+
+.nav__button:hover {
+    background: var(--medium);
+    color: var(--black);
+}
+
+/* Banner video */
+.banner-video {
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    object-fit: cover;
+
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    z-index: -1;
+}
+
+.banner-video > video {
+    width: 100vw;
+}
+
+/* Main */
+
+main {
+    font-size: xx-large;
+
+    width: 100vw;
+}
+
+/* Slogan */
+
+main > .slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: max-content;
+    height: 100vh;
+
+    padding-left: var(--padding-5);
+
+    font-size: 4rem;
+
+    color: var(--white);
+}
+
+main .slogan__sub-slogan:nth-child(2),
+main .slogan__sub-slogan:nth-child(4) {
+    width: max-content;
+
+    background: var(--black);
+
+    margin-top: 1rem;
+    margin-left: 2rem;
+    padding: 0.5rem;
+
+    border-radius: var(--border-radius);
+}
+
+main .slogan__sub-slogan:nth-child(1),
+main .slogan__sub-slogan:nth-child(3) {
+    width: max-content;
+
+    margin-top: 1rem;
+    margin-left: 2rem;
+    padding: 0.5rem;
+}
+
+main .slogan__sub-slogan--wrapper {
+    display: flex;
+    align-items: center;
+}
+
+main .slogan .slogan__action-btn {
+    cursor: pointer;
+
+    --spacing: 2rem;
+
+    width: 3.8em;
+    height: max-content;
+
+    margin-left: var(--spacing);
+    margin-top: var(--spacing);
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    position: relative;
+}
+
+main .slogan .slogan__action-btn:after {
+    content: "";
+
+    width: 3.2rem;
+    height: 3.2rem;
+
+    left: 0;
+    background: var(--bg);
+    border-radius: 2rem;
+
+    z-index: -1;
+
+    position: absolute;
+
+    transition: width 0.45s, height 0.45s;
+}
+
+main .slogan .slogan__action-btn:hover:after {
+    content: "";
+
+    width: 100%;
+    height: 3.2rem;
+
+    left: 0;
+    background: var(--bg);
+    border-radius: 2rem;
+
+    position: absolute;
+}
+
+main .slogan .slogan__action-btn div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 3.2rem;
+    height: 3.2rem;
+
+    padding: var(--padding-1);
+
+    background: var(--bg);
+    border-radius: 50%;
+
+    color: var(--black);
+    font-size: 1rem;
+}
+
+main .slogan .slogan__action-btn a {
+    text-decoration: none;
+
+    color: var(--white);
+
+    margin-left: 1rem;
+    font-size: 0.42em;
+
+    right: 0.5em;
+    position: absolute;
+
+    transition: color 0.45s ease;
+}
+
+main .slogan .slogan__action-btn:hover a {
+    color: var(--black);
+}
+
+/* Container */
+
+main .container {
+    padding: 2rem 1rem;
+
+    position: relative;
+}
+
+main .container::before {
+    content: "";
+
+    width: 100vw;
+    height: 0.5rem;
+    background: linear-gradient(to top, var(--bg), transparent);
+
+    top: -0.5rem;
+    left: 0;
+
+    position: absolute;
+}
+
+/* slider */
+
+.container__slider-wrapper {
+    display: flex;
+
+    margin-bottom: 2rem;
+}
+
+.container__slider-wrapper .slider__wrapper {
+    display: flex;
+    width: 100%;
+
+    animation: infiniteSlide 10s linear infinite;
+    transform: translateX(100%);
+}
+
+.container__slider-wrapper .slider__wrapper ul {
+    flex-basis: 50%;
+}
+
+.container__slider-wrapper .slider__wrapper .slider__wrapper-item {
+    display: flex;
+    justify-content: center;
+    width: 10rem;
+    line-height: 2;
+    font-size: 0.8em;
+    font-weight: lighter;
+    margin: 0 1rem;
+}
+
+/* card */
+
+main .container div[aria-label="Dây chuyền"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100vh;
+
+    opacity: 0;
+    transform: scale(0.3);
+
+    position: relative;
+}
+
+main .container div[aria-label="Dây chuyền"] h2 {
+    top: 0;
+    left: 50%;
+
+    opacity: 1;
+    transition: opacity 0.5s ease;
+
+    transform: translateX(-50%);
+
+    position: absolute;
+}
+
+div[aria-label="Dây chuyền"] ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #000;
+
+    position: relative;
+}
+
+div[aria-label="Dây chuyền"] ul > li {
+    width: 15rem;
+    height: 25rem;
+
+    object-fit: cover;
+    position: absolute;
+
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+div[aria-label="Dây chuyền"] ul > li img {
+    border-radius: var(--border-radius);
+}
+
+div[aria-label="Dây chuyền"] ul > li:first-child {
+    transform: rotate(8deg);
+    z-index: 4;
+}
+
+div[aria-label="Dây chuyền"] ul > li:nth-child(2) {
+    font-size: larger;
+
+    transform: rotate(0deg);
+    z-index: 3;
+}
+
+div[aria-label="Dây chuyền"] ul > li:nth-child(2)::before {
+    content: "😀";
+
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    transition: top 0.5s, left 0.5s, opacity 0.5s;
+    position: absolute;
+}
+
+div[aria-label="Dây chuyền"] ul:hover > li:nth-child(2)::before {
+    opacity: 1;
+
+    top: -5rem;
+    left: -5rem;
+}
+
+div[aria-label="Dây chuyền"] ul > li:nth-child(3) {
+    font-size: larger;
+
+    transform: rotate(-5deg);
+    z-index: 2;
+}
+
+div[aria-label="Dây chuyền"] ul > li:nth-child(3)::before {
+    content: "👑";
+
+    bottom: 5rem;
+    left: 0;
+    opacity: 0;
+
+    transition: bottom 0.5s, left 0.5s, opacity 0.5s;
+    position: absolute;
+}
+
+div[aria-label="Dây chuyền"] ul:hover > li:nth-child(3)::before {
+    opacity: 1;
+
+    left: 100%;
+    bottom: -2rem;
+}
+
+div[aria-label="Dây chuyền"] ul > li:last-child {
+    font-size: larger;
+
+    transform: rotate(-10deg);
+    z-index: 1;
+}
+
+div[aria-label="Dây chuyền"] ul > li:last-child::before {
+    content: "🔥";
+
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    transition: top 0.5s, left 0.5s, opacity 0.5s;
+    position: absolute;
+}
+
+div[aria-label="Dây chuyền"] ul:hover > li:last-child::before {
+    opacity: 1;
+
+    left: -5rem;
+}
+
+div[aria-label="Dây chuyền"] ul:hover > li:first-child {
+    transform: rotate(18deg) translateX(20rem) translateY(-6rem);
+}
+
+div[aria-label="Dây chuyền"] ul:hover > li:nth-child(2) {
+    transform: rotate(6deg) translateX(8rem) translateY(-3.3rem);
+}
+
+div[aria-label="Dây chuyền"] ul:hover > li:nth-child(3) {
+    transform: rotate(-5deg) translateX(-5rem) translateY(-3rem);
+}
+
+div[aria-label="Dây chuyền"] ul:hover > li:last-child {
+    transform: rotate(-20deg) translateX(-15rem) translateY(-5rem);
+}
+
+/* section 1 */
+
+section .banner__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url("../assets/img/yanji-digital-cover.png") no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+section .banner__container .banner__container-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    color: var(--white);
+    font-size: 1.4em;
+
+    position: absolute;
+}
+
+.banner__container .banner__container-desc {
+    background: rgba(2, 0, 0, 0.68);
+}
+
+.banner__container .banner__container-desc span {
+    text-align: center;
+
+    padding: 1rem;
+}
+
+.banner__container .banner__container-desc img {
+    width: 15rem;
+    height: 15rem;
+}
+
+/* flip card */
+.flip-container {
+    display: flex;
+    align-items: center;
+
+    height: 100vh;
+}
+
+.flip {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 5rem;
+
+    perspective: 900px;
+
+    animation: infiniteSlide 18s linear infinite;
+    transform: translateX(100%);
+}
+
+.flip .flip-card {
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+
+    opacity: 0;
+
+    cursor: pointer;
+}
+
+.flip .flip-card:hover {
+    transform: rotateY(180deg);
+    transition-delay: 0.15s;
+}
+
+.flip .flip-card .flip-card__front,
+.flip .flip-card .flip-card__back {
+    top: 0;
+    left: 0;
+    position: relative;
+
+    backface-visibility: hidden;
+}
+
+.flip .flip-card:first-child .flip-card__front {
+    width: 20rem;
+    height: 28rem;
+
+    background: url("../assets/img/cottoc/332697744_1524222117986898_4178457034873193316_n.jpg")
+        no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+}
+.flip .flip-card:nth-child(2) .flip-card__front {
+    width: 20rem;
+    height: 28rem;
+
+    background: url("../assets/img/cottoc/331499064_1348179282391462_2913575418865407949_n.jpg")
+        no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+}
+.flip .flip-card:nth-child(3) .flip-card__front {
+    width: 20rem;
+    height: 28rem;
+
+    background: url("../assets/img/cottoc/331708784_504909818384911_7748956642974919651_n.jpg")
+        no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+}
+.flip .flip-card:nth-child(4) .flip-card__front {
+    width: 20rem;
+    height: 28rem;
+
+    background: url("../assets/img/caitoc/314550912_1936911806699966_7727140248792403031_n.jpg")
+        no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+}
+.flip .flip-card:nth-child(5) .flip-card__front {
+    width: 20rem;
+    height: 28rem;
+
+    background: url("../assets/img/khangiay/331428108_1566593973851591_2937418231443044643_n.jpg")
+        no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+}
+.flip .flip-card:nth-child(6) .flip-card__front {
+    width: 20rem;
+    height: 28rem;
+
+    background: url("../assets/img/tui/1647251624efee6f7771a97f035c1eb97dc4f1560e_thumbnail_900x.webp")
+        no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+}
+.flip .flip-card:nth-child(7) .flip-card__front {
+    width: 20rem;
+    height: 28rem;
+
+    background: url("../assets/img/tui/167204449978085b318b575e6c6ca5796e03a2d59a_thumbnail_900x.webp")
+        no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+}
+.flip .flip-card:last-child .flip-card__front {
+    width: 20rem;
+    height: 28rem;
+
+    background: url("../assets/img/caitoc/z4370810572023_1facc37b985585f536433b029c4425e6.jpg")
+        no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.flip .flip-card .flip-card__back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 20rem;
+    height: 28rem;
+
+    transform: rotateY(180deg);
+
+    background: #000;
+    color: white;
+
+    position: absolute;
+}

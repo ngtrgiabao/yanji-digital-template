@@ -12,6 +12,7 @@
     "license": "ISC",
     "dependencies": {
         "animejs": "^3.2.1",
+        "gsap": "^3.11.5",
         "svg-path-properties": "^1.1.0"
     }
 }

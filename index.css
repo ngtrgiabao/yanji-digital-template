@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import url("./style/main.css");
+
 :root {
     --font-primary: "Roslindale", "Times New Roman", serif;
     --font-secondary: "Inter", "Helvetica", "Arial", sans-serif;
@@ -58,162 +62,43 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 1;
+    font-family: "Geologica", sans-serif;
+
+    height: 400vh;
+
+    background: var(--bg);
 
     overflow-x: hidden;
 
     position: relative;
+
+    scroll-behavior: smooth;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    width: calc(100% - 2rem);
-
-    background: var(--black);
-    border-radius: var(--border-radius);
-    color: var(--white);
-
-    padding: 1rem;
-    margin: 1rem;
-
-    font-weight: bold;
-
-    position: fixed;
-
-    z-index: 999;
+ul {
+    list-style: none;
 }
 
-nav > #logo {
-    font-size: x-large;
+/* CUSTOME SCROLLBAR */
+
+/* For Chrome, Safari and Opera */
+.scrollbar::-webkit-scrollbar {
+    width: 5px;
 }
 
-.nav__button {
-    --border-radius: 1rem;
-
-    color: var(--white);
-
-    border: 1px solid var(--white);
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-
-    transition: all 0.5s ease;
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #fff;
 }
 
-.nav__button:hover {
-    background: var(--medium);
-    color: var(--black);
+/* Custom styling of scrollbar thumb */
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--black);
+    border-radius: 5px;
 }
 
-/* Banner video */
-.banner-video {
-    width: 100vw;
-    height: 100vh;
-
-    overflow: hidden;
-
-    object-fit: cover;
-
-    top: 0;
-    left: 0;
-    position: absolute;
-
-    z-index: -1;
-}
-
-.banner-video > video {
-    width: 100vw;
-}
-
-/* Main */
-
-main {
-    padding-left: var(--padding-5);
-
-    color: var(--white);
-    font-size: xx-large;
-
-    width: 100vw;
-}
-
-main > .slogan {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    width: max-content;
-    height: 100vh;
-
-    font-size: 4rem;
-}
-
-main .slogan__sub-slogan {
-    width: max-content;
-
-    background: var(--black);
-
-    margin-top: 1rem;
-    margin-left: 2rem;
-    padding: 0.5rem;
-
-    border-radius: var(--border-radius);
-}
-
-main .slogan .slogan__action-btn {
-    cursor: pointer;
-
-    --spacing: 2rem;
-
-    width: 3.3em;
-    height: max-content;
-
-    margin-left: var(--spacing);
-    margin-top: var(--spacing);
-
-    display: flex;
-    align-items: center;
-
-    position: relative;
-}
-
-main .slogan .slogan__action-btn div {
-    width: 3.2rem;
-    height: 3.2rem;
-
-    padding: var(--padding-1);
-
-    background: var(--bg);
-    border-radius: 50%;
-    border: 3px solid var(--black);
-
-    color: var(--black);
-    font-size: 1rem;
-
-    transition: all 0.45s ease;
-}
-
-main .slogan .slogan__action-btn:hover div {
-    width: 100%;
-    height: 3.2rem;
-
-    border-radius: 2rem;
-}
-
-main .slogan .slogan__action-btn button {
-    color: var(--white);
-
-    margin-left: 1rem;
-    font-size: 0.4em;
-
-    right: 0.4em;
-    position: absolute;
-
-    transition: all 0.45s ease;
-}
-
-main .slogan .slogan__action-btn:hover button {
-    color: var(--black);
-
-    font-weight: bold;
+/* Custom styling of scrollbar track */
+.scrollbar::-webkit-scrollbar-track {
+    background-color: var(--black);
 }

@@ -31,7 +31,7 @@
         <link rel="stylesheet" href="index.css" />
         <title>Yanji Digital</title>
     </head>
-    <body>
+    <body class="scrollbar">
         <nav>
             <div id="logo">Yanji Digital</div>
             <button class="nav__button">Liên hệ với chúng tôi</button>
@@ -43,19 +43,21 @@
                 autoplay
                 muted
                 loop
-                poster="./assets/img/yanji-digital-cover.png"
+                poster="./assets/poster/hero-poster.jpg"
             ></video>
         </section>
 
         <main>
             <div class="slogan">
                 <span>
-                    <div class="slogan__logo">Yanji Digital</div>
-                    <div class="slogan__sub-slogan slogan__sub-slogan-1">
-                        Định hình phong cách
-                    </div>
-                    <div class="slogan__sub-slogan slogan__sub-slogan-2">
-                        riêng của bạn
+                    <div class="slogan__sub-slogan">Định hình</div>
+
+                    <div class="slogan__sub-slogan">Phong cách</div>
+
+                    <div class="slogan__sub-slogan slogan__sub-slogan--wrapper">
+                        <div>riêng</div>
+
+                        <div class="slogan__sub-slogan">của bạn</div>
                     </div>
                 </span>
 
@@ -63,11 +65,164 @@
                     <div>
                         <i class="fa-solid fa-arrow-right"></i>
                     </div>
-                    <button>Bắt đầu ngay</button>
+                    <a href="#container">Bắt đầu ngay</a>
                 </div>
             </div>
 
-            <div class="container"></div>
+            <div class="container" id="container">
+                <div class="container__slider-wrapper">
+                    <ul class="slider__wrapper">
+                        <li class="slider__wrapper-item">Dây chuyền</li>
+                        <li class="slider__wrapper-item">Vòng tay</li>
+                        <li class="slider__wrapper-item">Nhẫn</li>
+                        <li class="slider__wrapper-item">Giày</li>
+                        <li class="slider__wrapper-item">Balo</li>
+                        <li class="slider__wrapper-item">Quần áo</li>
+                        <li class="slider__wrapper-item">Phụ kiện</li>
+                    </ul>
+                    <ul class="slider__wrapper">
+                        <li class="slider__wrapper-item">Dây chuyền</li>
+                        <li class="slider__wrapper-item">Vòng tay</li>
+                        <li class="slider__wrapper-item">Nhẫn</li>
+                        <li class="slider__wrapper-item">Giày</li>
+                        <li class="slider__wrapper-item">Balo</li>
+                        <li class="slider__wrapper-item">Quần áo</li>
+                        <li class="slider__wrapper-item">Phụ kiện</li>
+                    </ul>
+                </div>
+
+                <div class="container__rainbow-card" aria-label="Dây chuyền">
+                    <h2>Hover it 👇</h2>
+
+                    <ul class="rainbow-card__item">
+                        <li>
+                            <img
+                                src="./assets/img/daychuyen/daychuyen1.webp"
+                                loading="lazy"
+                                role="img"
+                                decoding="async"
+                                alt=""
+                            />
+                        </li>
+                        <li>
+                            <img
+                                src="./assets/img/daychuyen/daychuyen2.webp"
+                                loading="lazy"
+                                role="img"
+                                decoding="async"
+                                alt=""
+                            />
+                        </li>
+                        <li>
+                            <img
+                                src="./assets/img/daychuyen/daychuyen3.webp"
+                                loading="lazy"
+                                role="img"
+                                decoding="async"
+                                alt=""
+                            />
+                        </li>
+                        <li>
+                            <img
+                                src="./assets/img/daychuyen/daychuyen4.webp"
+                                loading="lazy"
+                                role="img"
+                                decoding="async"
+                                alt=""
+                            />
+                        </li>
+                    </ul>
+                </div>
+
+                <section class="banner">
+                    <div class="banner__container">
+                        <div class="banner__container-desc">
+                            <span
+                                >Luôn mang đến khách hàng dịch vụ tốt hơn cả
+                                mong đợi</span
+                            >
+                            <img
+                                loading="lazy"
+                                role="img"
+                                decoding="async"
+                                src="./assets/img/logo.png"
+                                alt="logo"
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                <div class="flip-container">
+                    <section class="flip">
+                        <div class="flip-card">
+                            <div class="flip-card__front"></div>
+                            <div class="flip-card__back">140.000 VND</div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card__front"></div>
+                            <div class="flip-card__back">140.000 VND</div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card__front"></div>
+                            <div class="flip-card__back">140.000 VND</div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card__front"></div>
+                            <div class="flip-card__back">140.000 VND</div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card__front"></div>
+                            <div class="flip-card__back">140.000 VND</div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card__front"></div>
+                            <div class="flip-card__back">140.000 VND</div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card__front"></div>
+                            <div class="flip-card__back">140.000 VND</div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card__front"></div>
+                            <div class="flip-card__back">140.000 VND</div>
+                        </div>
+                    </section>
+                    <section class="flip">
+                        <div class="flip-card">
+                            <div class="flip-card__front"></div>
+                            <div class="flip-card__back">140.000 VND</div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card__front"></div>
+                            <div class="flip-card__back">140.000 VND</div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card__front"></div>
+                            <div class="flip-card__back">140.000 VND</div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card__front"></div>
+                            <div class="flip-card__back">140.000 VND</div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card__front"></div>
+                            <div class="flip-card__back">140.000 VND</div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card__front"></div>
+                            <div class="flip-card__back">140.000 VND</div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card__front"></div>
+                            <div class="flip-card__back">140.000 VND</div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card__front"></div>
+                            <div class="flip-card__back">140.000 VND</div>
+                        </div>
+                    </section>
+                </div>
+            </div>
         </main>
 
         <footer></footer>
