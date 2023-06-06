@@ -225,18 +225,18 @@ main .container::before {
 .container__slider-wrapper {
     display: flex;
 
+    background: white;
+    overflow: hidden;
+
     margin-bottom: 2rem;
 }
 
 .container__slider-wrapper .slider__wrapper {
     display: flex;
     width: 100%;
-
-    animation: infiniteSlide 10s linear infinite;
-    transform: translateX(100%);
 }
 
-.container__slider-wrapper .slider__wrapper ul {
+.container__slider-wrapper .slider__wrapper {
     flex-basis: 50%;
 }
 
@@ -450,34 +450,10 @@ section .banner__container .banner__container-desc {
     justify-content: space-between;
 
     margin-top: 5rem;
-
-    perspective: 900px;
-
-    animation: infiniteSlide 18s linear infinite;
-    transform: translateX(100%);
 }
 
 .flip .flip-card {
-    transition: transform 0.5s ease;
-    transform-style: preserve-3d;
-
-    opacity: 0;
-
-    cursor: pointer;
-}
-
-.flip .flip-card:hover {
-    transform: rotateY(180deg);
-    transition-delay: 0.15s;
-}
-
-.flip .flip-card .flip-card__front,
-.flip .flip-card .flip-card__back {
-    top: 0;
-    left: 0;
-    position: relative;
-
-    backface-visibility: hidden;
+    margin: 0 0.5rem;
 }
 
 .flip .flip-card:first-child .flip-card__front {
@@ -551,20 +527,4 @@ section .banner__container .banner__container-desc {
         no-repeat center;
     background-size: cover;
     object-fit: cover;
-}
-
-.flip .flip-card .flip-card__back {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 20rem;
-    height: 28rem;
-
-    transform: rotateY(180deg);
-
-    background: #000;
-    color: white;
-
-    position: absolute;
 }
