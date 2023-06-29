@@ -38,6 +38,8 @@
     margin: 0;
     padding: 0;
     font: inherit;
+
+    /* cursor: none; */
 }
 img,
 picture,
@@ -64,8 +66,6 @@ body {
     line-height: 1;
     font-family: "Geologica", sans-serif;
 
-    height: 400vh;
-
     background: var(--bg);
 
     overflow-x: hidden;
@@ -77,6 +77,12 @@ body {
 
 ul {
     list-style: none;
+}
+
+html,
+body {
+    min-height: 100%;
+    overscroll-behavior: none;
 }
 
 /* CUSTOME SCROLLBAR */

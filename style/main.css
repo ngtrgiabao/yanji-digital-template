@@ -1,5 +1,4 @@
 @import url("../index.css");
-
 @import url("../animation/autoScroll.css");
 
 nav {
@@ -20,7 +19,7 @@ nav {
 
     position: fixed;
 
-    z-index: 999;
+    z-index: 9;
 }
 
 nav > #logo {
@@ -227,6 +226,7 @@ main .container::before {
 
     background: white;
     overflow: hidden;
+    user-select: none;
 
     margin-bottom: 2rem;
 }
@@ -408,6 +408,8 @@ section .banner__container {
     background: url("../assets/img/yanji-digital-cover.png") no-repeat;
     width: 100%;
     height: 100vh;
+
+    opacity: 0;
 }
 
 section .banner__container .banner__container-desc {
@@ -440,9 +442,24 @@ section .banner__container .banner__container-desc {
 /* flip card */
 .flip-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+.flip-container span {
+    display: flex;
+    justify-content: center;
     align-items: center;
 
-    height: 100vh;
+    text-transform: uppercase;
+}
+
+.flip-container__wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .flip {
@@ -527,4 +544,32 @@ section .banner__container .banner__container-desc {
         no-repeat center;
     background-size: cover;
     object-fit: cover;
+}
+
+.line-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+    margin: 35% auto 0;
+}
+
+.img {
+    width: 100%;
+    height: 20em;
+    position: relative;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.img::before {
+    content: "";
+    position: absolute;
+
+    height: 100vh;
+    width: 100%;
+
+    z-index: 4;
+    top: 0;
+    left: 0;
+    border-right: 1px solid;
 }
