@@ -1,25 +1,33 @@
 @import url("../index.css");
 @import url("../animation/autoScroll.css");
 
+.navbar {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+
+    position: fixed;
+
+    z-index: 9;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    width: calc(100% - 2rem);
+    width: 100%;
 
     background: var(--black);
     border-radius: var(--border-radius);
     color: var(--white);
 
     padding: 1rem;
-    margin: 1rem;
 
     font-weight: bold;
-
-    position: fixed;
-
-    z-index: 9;
 }
 
 nav > #logo {
@@ -554,7 +562,7 @@ section .banner__container .banner__container-desc {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     height: 100vh;
-    margin: 35% auto;
+    margin: 35% auto 30%;
 }
 
 .img {
