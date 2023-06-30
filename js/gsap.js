@@ -110,3 +110,15 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
+
+gsap.utils.toArray(".scale-banner").forEach((banner) => {
+    gsap.to(banner, {
+        scale: 1,
+        scrollTrigger: {
+            trigger: banner,
+            scrub: 1.2,
+            start: "top center",
+            end: "+=100 center",
+        },
+    });
+});
