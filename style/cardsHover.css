@@ -1,0 +1,145 @@
+main .container div[aria-label="Dây chuyền"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100vh;
+
+    opacity: 0;
+    transform: scale(0.3);
+
+    position: relative;
+}
+
+main .container div[aria-label="Dây chuyền"] h2 {
+    top: 0;
+    left: 50%;
+
+    opacity: 1;
+    transition: opacity 0.5s ease;
+
+    transform: translateX(-50%);
+
+    position: absolute;
+}
+
+div[aria-label="Dây chuyền"] ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #000;
+
+    position: relative;
+}
+
+div[aria-label="Dây chuyền"] ul > li {
+    width: 15rem;
+    height: 25rem;
+
+    object-fit: cover;
+    position: absolute;
+
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+div[aria-label="Dây chuyền"] ul > li img {
+    border-radius: var(--border-radius);
+}
+
+div[aria-label="Dây chuyền"] ul > li:first-child {
+    transform: rotate(8deg);
+    z-index: 4;
+}
+
+div[aria-label="Dây chuyền"] ul > li:nth-child(2) {
+    font-size: larger;
+
+    transform: rotate(0deg);
+    z-index: 3;
+}
+
+div[aria-label="Dây chuyền"] ul > li:nth-child(2)::before {
+    content: "😀";
+
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    transition: top 0.5s, left 0.5s, opacity 0.5s;
+    position: absolute;
+}
+
+div[aria-label="Dây chuyền"] ul:hover > li:nth-child(2)::before {
+    opacity: 1;
+
+    top: -5rem;
+    left: -5rem;
+}
+
+div[aria-label="Dây chuyền"] ul > li:nth-child(3) {
+    font-size: larger;
+
+    transform: rotate(-5deg);
+    z-index: 2;
+}
+
+div[aria-label="Dây chuyền"] ul > li:nth-child(3)::before {
+    content: "👑";
+
+    bottom: 5rem;
+    left: 0;
+    opacity: 0;
+
+    transition: bottom 0.5s, left 0.5s, opacity 0.5s;
+    position: absolute;
+}
+
+div[aria-label="Dây chuyền"] ul:hover > li:nth-child(3)::before {
+    opacity: 1;
+
+    left: 100%;
+    bottom: -2rem;
+}
+
+div[aria-label="Dây chuyền"] ul > li:last-child {
+    font-size: larger;
+
+    transform: rotate(-10deg);
+    z-index: 1;
+}
+
+div[aria-label="Dây chuyền"] ul > li:last-child::before {
+    content: "🔥";
+
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    transition: top 0.5s, left 0.5s, opacity 0.5s;
+    position: absolute;
+}
+
+div[aria-label="Dây chuyền"] ul:hover > li:last-child::before {
+    opacity: 1;
+
+    left: -5rem;
+}
+
+div[aria-label="Dây chuyền"] ul:hover > li:first-child {
+    transform: rotate(18deg) translateX(20rem) translateY(-6rem);
+}
+
+div[aria-label="Dây chuyền"] ul:hover > li:nth-child(2) {
+    transform: rotate(6deg) translateX(8rem) translateY(-3.3rem);
+}
+
+div[aria-label="Dây chuyền"] ul:hover > li:nth-child(3) {
+    transform: rotate(-5deg) translateX(-5rem) translateY(-3rem);
+}
+
+div[aria-label="Dây chuyền"] ul:hover > li:last-child {
+    transform: rotate(-20deg) translateX(-15rem) translateY(-5rem);
+}

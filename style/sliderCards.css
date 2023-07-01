@@ -1,0 +1,95 @@
+/* slider cards */
+.flip-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+    margin-top: 2em;
+    overflow: hidden;
+}
+
+.flip-container span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+}
+
+.flip-container__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.flip {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 5rem;
+}
+
+.flip .flip-card {
+    margin: 0 0.5rem;
+}
+
+.flip-card__front {
+    width: 20rem;
+    height: 28rem;
+}
+
+/* Flip cards */
+.flip .flip-card:first-child .flip-card__front {
+    background: url("../assets/img/cottoc/332697744_1524222117986898_4178457034873193316_n.jpg")
+        no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+}
+.flip .flip-card:nth-child(2) .flip-card__front {
+    background: url("../assets/img/cottoc/331499064_1348179282391462_2913575418865407949_n.jpg")
+        no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+}
+.flip .flip-card:nth-child(3) .flip-card__front {
+    background: url("../assets/img/cottoc/331708784_504909818384911_7748956642974919651_n.jpg")
+        no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+}
+.flip .flip-card:nth-child(4) .flip-card__front {
+    background: url("../assets/img/caitoc/314550912_1936911806699966_7727140248792403031_n.jpg")
+        no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+}
+.flip .flip-card:nth-child(5) .flip-card__front {
+    background: url("../assets/img/khangiay/331428108_1566593973851591_2937418231443044643_n.jpg")
+        no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+}
+.flip .flip-card:nth-child(6) .flip-card__front {
+    background: url("../assets/img/tui/1647251624efee6f7771a97f035c1eb97dc4f1560e_thumbnail_900x.webp")
+        no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+}
+.flip .flip-card:nth-child(7) .flip-card__front {
+    background: url("../assets/img/tui/167204449978085b318b575e6c6ca5796e03a2d59a_thumbnail_900x.webp")
+        no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+}
+.flip .flip-card:nth-child(8) .flip-card__front {
+    background: url("../assets/img/khangiay/331428108_1566593973851591_2937418231443044643_n.jpg")
+        no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+}
+.flip .flip-card:last-child .flip-card__front {
+    background: url("../assets/img/caitoc/z4370810572023_1facc37b985585f536433b029c4425e6.jpg")
+        no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+}

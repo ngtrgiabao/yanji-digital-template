@@ -1,7 +1,7 @@
 const flipCardWrapper = document.querySelectorAll(".flip");
 
 flipCardWrapper.forEach((wrapper) => {
-    wrapper.innerHTML = Array.from({ length: 8 })
+    wrapper.innerHTML = Array.from({ length: 9 })
         .map(
             () => `
                     <div class="flip-card">
