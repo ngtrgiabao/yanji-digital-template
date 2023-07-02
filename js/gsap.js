@@ -12,14 +12,21 @@ const animateSlider = (element, duration) => {
                         document.querySelector(".slider__wrapper")
                     ).width
                 );
-                return (parseFloat(x) - width) % width;
+                return gsap.utils.wrap(-width, 0)(parseFloat(x));
             }),
         },
-        ease: "none",
+        ease: "linear",
+        smoothChildTiming: true,
+        immediateRender: true,
+        force3D: true,
     });
 };
 
-gsap.from("nav", { duration: 1.2, ease: "power2.out", y: -100 });
+gsap.from("nav", {
+    duration: 3,
+    ease: "power2.out",
+    opacity: 0,
+});
 
 const tl = gsap.timeline({
     defaults: {
@@ -28,7 +35,7 @@ const tl = gsap.timeline({
 });
 
 animateSlider(".slider__wrapper", 18);
-animateSlider(".flip", 18);
+animateSlider(".flip", 20);
 
 // hero
 
