@@ -45,6 +45,7 @@ nav > #logo {
     border-radius: var(--border-radius);
 
     transition: background 0.5s, color 0.5s;
+    text-decoration: none;
 }
 
 .nav__button:hover {
@@ -92,7 +93,7 @@ main > .slogan {
 
     padding-left: var(--padding-5);
 
-    font-size: 4rem;
+    font-size: 1.8em;
 
     color: var(--white);
 }
