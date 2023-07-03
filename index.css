@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
 @import url("./style/main.css");
 
@@ -65,6 +65,7 @@ body {
     font-size: 16px;
     line-height: 1;
     font-family: "Geologica", sans-serif;
+    font-family: "Oswald", sans-serif;
 
     background: var(--bg);
 
@@ -117,7 +118,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     height: 100vh;
-    margin: 35% auto 28%;
+    margin: 35% auto;
 }
 
 .img {
@@ -139,4 +140,8 @@ body {
     top: 0;
     left: 0;
     border-right: 1px solid;
+}
+
+.blur {
+    filter: blur(2px);
 }

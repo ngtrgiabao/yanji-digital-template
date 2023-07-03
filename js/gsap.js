@@ -120,7 +120,7 @@ requestAnimationFrame(raf);
 
 gsap.utils.toArray(".scale-banner").forEach((banner) => {
     gsap.to(banner, {
-        scale: 1,
+        scale: 0.94,
         scrollTrigger: {
             trigger: banner,
             scrub: 1.2,
@@ -128,4 +128,38 @@ gsap.utils.toArray(".scale-banner").forEach((banner) => {
             end: "+=100 center",
         },
     });
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".slogan-banner__title", {
+    scrollTrigger: {
+        trigger: ".slogan-banner__title",
+        start: "-=100 center",
+        end: "-=100 center",
+        scrub: 2,
+    },
+    width: "100%",
+});
+
+gsap.to(".slogan-banner__main-content", {
+    scrollTrigger: {
+        trigger: ".slogan-banner__main-content",
+        start: "-=100 center",
+        end: "-=100 center",
+        scrub: 2,
+    },
+    opacity: 1,
+    scale: 1,
+});
+
+gsap.to(".slogan-banner__btn", {
+    scrollTrigger: {
+        trigger: ".slogan-banner__btn",
+        start: "-=280 center",
+        end: "-=280 center",
+        scrub: 1.2,
+    },
+    opacity: 1,
+    scale: 1,
 });

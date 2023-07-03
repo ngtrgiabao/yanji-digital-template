@@ -98,8 +98,7 @@ main > .slogan {
     color: var(--white);
 }
 
-main .slogan__sub-slogan:nth-child(2),
-main .slogan__sub-slogan:nth-child(4) {
+main .slogan__sub-slogan:nth-child(even) {
     width: max-content;
 
     background: var(--black);
@@ -111,8 +110,7 @@ main .slogan__sub-slogan:nth-child(4) {
     border-radius: var(--border-radius);
 }
 
-main .slogan__sub-slogan:nth-child(1),
-main .slogan__sub-slogan:nth-child(3) {
+main .slogan__sub-slogan:nth-child(odd) {
     width: max-content;
 
     margin-top: 1rem;
@@ -211,8 +209,6 @@ main .slogan .slogan__action-btn:hover a {
 /* Container */
 
 main .container {
-    padding: 2rem 1rem;
-
     position: relative;
 }
 
@@ -253,11 +249,15 @@ main .container::before {
 .container__slider-wrapper .slider__wrapper .slider__wrapper-item {
     display: flex;
     justify-content: center;
-    width: 10rem;
+
+    width: max-content;
+
     line-height: 2;
     font-size: 0.8em;
-    font-weight: lighter;
-    margin: 0 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    padding: 0 1em;
 }
 
 /* second banner */
@@ -279,27 +279,130 @@ section .banner__container video {
 
 section .banner__container .banner__container-desc {
     display: flex;
-    justify-content: center;
-    align-items: center;
 
     width: 80%;
+
     color: var(--white);
-    font-size: 1.4em;
+    font-size: 1.2em;
 
     position: absolute;
 }
 
-.banner__container .banner__container-desc {
+.banner__container-desc-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
     background: rgba(2, 0, 0, 0.68);
 }
 
 .banner__container .banner__container-desc span {
+    display: flex;
+    align-items: center;
+
+    text-transform: uppercase;
+
     text-align: center;
 
-    padding: 1rem;
+    margin-left: 1.4em;
 }
 
 .banner__container .banner__container-desc img {
     width: 15rem;
     height: 15rem;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner img {
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Slogan banner */
+.slogan-banner {
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(0, 0, 0, 0.541);
+
+    width: 100%;
+    height: 100%;
+
+    padding: 3em;
+
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.slogan-banner__title {
+    display: flex;
+    justify-content: space-between;
+
+    width: 0;
+}
+
+.slogan-banner__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex: 1;
+}
+
+.slogan-banner__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    width: 100%;
+}
+
+.slogan-banner__main-content {
+    font-size: 3em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 5em;
+
+    line-height: 1.1;
+
+    opacity: 0;
+    transform: scale(0.6);
+}
+
+.slogan-banner__btn {
+    color: var(--white);
+
+    height: max-content;
+    width: max-content;
+
+    border: 1px solid;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+
+    text-transform: uppercase;
+
+    transition: all 0.3s ease;
+
+    opacity: 0;
+}
+
+.slogan-banner__btn:hover {
+    height: max-content;
+    width: max-content;
+
+    background: var(--white);
+
+    color: var(--black);
 }
