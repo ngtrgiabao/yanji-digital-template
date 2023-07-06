@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
-@import url("./style/main.css");
-
 :root {
     --font-primary: "Roslindale", "Times New Roman", serif;
     --font-secondary: "Inter", "Helvetica", "Arial", sans-serif;
@@ -84,6 +82,10 @@ html,
 body {
     min-height: 100%;
     overscroll-behavior: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* CUSTOME SCROLLBAR */

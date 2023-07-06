@@ -5,16 +5,6 @@ const animateSlider = (element, duration) => {
         xPercent: -100,
         duration: duration,
         repeat: -1,
-        modifiers: {
-            x: gsap.utils.unitize((x) => {
-                const width = parseFloat(
-                    window.getComputedStyle(
-                        document.querySelector(".slider__wrapper")
-                    ).width
-                );
-                return gsap.utils.wrap(-width, 0)(parseFloat(x));
-            }),
-        },
         ease: "linear",
         smoothChildTiming: true,
         immediateRender: true,
@@ -34,8 +24,8 @@ const tl = gsap.timeline({
     },
 });
 
-animateSlider(".slider__wrapper", 18);
 animateSlider(".flip", 20);
+animateSlider(".container__slider-wrapper-item", 30);
 
 // hero
 
@@ -46,17 +36,6 @@ tl.from(".slogan__sub-slogan", {
     stagger: 0.2,
 }).from(".slogan__action-btn", {
     opacity: 0,
-});
-
-gsap.to(".slogan", {
-    scrollTrigger: {
-        trigger: ".slogan",
-        start: "60% 20%",
-        end: "60% 20%",
-        toggleActions: "play none reverse none",
-        scrub: 5,
-    },
-    x: 2000,
 });
 
 gsap.to(".container__rainbow-card", {
@@ -145,8 +124,8 @@ gsap.to(".slogan-banner__title", {
 gsap.to(".slogan-banner__main-content", {
     scrollTrigger: {
         trigger: ".slogan-banner__main-content",
-        start: "-=100 center",
-        end: "-=100 center",
+        start: "-=330 center",
+        end: "-=330 center",
         scrub: 2,
     },
     opacity: 1,
@@ -156,8 +135,8 @@ gsap.to(".slogan-banner__main-content", {
 gsap.to(".slogan-banner__btn", {
     scrollTrigger: {
         trigger: ".slogan-banner__btn",
-        start: "-=280 center",
-        end: "-=280 center",
+        start: "-=400 center",
+        end: "-=400 center",
         scrub: 1.2,
     },
     opacity: 1,

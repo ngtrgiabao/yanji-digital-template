@@ -1,0 +1,75 @@
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .banner-video {
+        height: 40vh !important;
+    }
+
+    .slogan {
+        height: 40vh !important;
+
+        padding-left: 0 !important;
+
+        font-size: 1em !important;
+    }
+
+    .slogan__sub-slogan {
+        margin-top: 0 !important;
+    }
+
+    .slogan__action-btn {
+        width: 5em !important;
+    }
+
+    .slogan__action-btn a {
+        font-size: large !important;
+    }
+
+    .container__slider-wrapper li {
+        font-size: medium !important;
+        width: max-content !important;
+    }
+
+    .container__rainbow-card {
+        height: 60vh !important;
+    }
+
+    .banner {
+        height: max-content !important;
+    }
+
+    .banner__container {
+        height: max-content !important;
+    }
+
+    .banner__container-desc-wrapper {
+        font-size: medium;
+        width: 90% !important;
+    }
+
+    .banner__container-desc-wrapper img {
+        height: 8rem !important;
+        width: 8rem !important;
+    }
+
+    .flip-container {
+        height: 65vh !important;
+    }
+
+    .line-col {
+        margin-top: 100% !important;
+        margin-bottom: 200% !important;
+
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .slogan-banner {
+        padding: 1em !important;
+    }
+
+    .slogan-banner__title {
+        font-size: large;
+    }
+
+    .slogan-banner__title p {
+        width: max-content; 
+    }
+}

@@ -1,10 +1,12 @@
-@import url("../index.css");
-@import url("../animation/autoScroll.css");
-@import url("./sliderCards.css");
-@import url("./cardsHover.css");
+@import "../index.css";
+@import "../animation/autoScroll.css";
+@import "./sliderCards.css";
+@import "./cardsHover.css";
+
+@import "./responsive/tablet/navbar.css";
 
 .navbar {
-    width: 100%;
+    width: 100vw;
 
     display: flex;
     justify-content: center;
@@ -60,6 +62,10 @@ nav > #logo {
 
     overflow: hidden;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     object-fit: cover;
 
     top: 0;
@@ -88,7 +94,6 @@ main > .slogan {
     flex-direction: column;
     justify-content: center;
 
-    width: max-content;
     height: 100vh;
 
     padding-left: var(--padding-5);
@@ -128,7 +133,7 @@ main .slogan .slogan__action-btn {
 
     --spacing: 2rem;
 
-    width: 3.8em;
+    width: 3.5em;
     height: max-content;
 
     margin-left: var(--spacing);
@@ -237,20 +242,17 @@ main .container::before {
     margin-bottom: 2rem;
 }
 
-.container__slider-wrapper .slider__wrapper {
+.container__slider-wrapper ul {
     display: flex;
     width: 100%;
 }
 
-.container__slider-wrapper .slider__wrapper {
-    flex-basis: 50%;
-}
-
-.container__slider-wrapper .slider__wrapper .slider__wrapper-item {
+.container__slider-wrapper li {
     display: flex;
     justify-content: center;
+    align-items: center;
 
-    width: max-content;
+    width: 18rem;
 
     line-height: 2;
     font-size: 0.8em;
@@ -314,12 +316,15 @@ section .banner__container .banner__container-desc {
 }
 
 .banner {
+    height: 100vh;
+
     position: relative;
 }
 
 .banner img {
     object-fit: cover;
     width: 100%;
+    height: 100%;
 }
 
 /* Slogan banner */
@@ -375,6 +380,8 @@ section .banner__container .banner__container-desc {
 
     width: 5em;
 
+    margin-top: 1em;
+
     line-height: 1.1;
 
     opacity: 0;
@@ -382,23 +389,30 @@ section .banner__container .banner__container-desc {
 }
 
 .slogan-banner__btn {
-    color: var(--white);
-
     height: max-content;
     width: max-content;
 
-    border: 1px solid;
+    border: 1px solid var(--white);
     border-radius: 1em;
-    padding: 0.5em 1em;
 
     text-transform: uppercase;
 
-    transition: all 0.3s ease;
+    overflow: hidden;
 
     opacity: 0;
 }
 
-.slogan-banner__btn:hover {
+.slogan-banner__btn a {
+    color: var(--white);
+    transition: all 0.3s ease;
+
+    display: block;
+    padding: 0.5em 1em;
+
+    width: 100%;
+}
+
+.slogan-banner__btn:hover a {
     height: max-content;
     width: max-content;
 
